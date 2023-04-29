@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ *  Contains code that defines the HTML Custom Text Views field.
+ */
+
+ /**
+  * Implements hook_autoload_info().
+  */
+function html_views_custom_text_autoload_info() {
+  return array(
+    'HtmlViewCustomTextFieldHander' => 'views/HtmlViewCustomTextFieldHander.inc',
+  );
+}
+
+/**
+ * Implements hook_permission().
+ */
+function html_views_custom_text_permission() {
+  return array(
+    'administer html custom text field' => array(
+      'title' => 'Administer HTML Custom Text Views field',
+      'description' => t('Edit the HTML tags allowed in the HTML Custom Text Views field.'),
+      'restrict access' => TRUE,
+      'warning' => t('Allows people to whitelist potentially dangerous HTML tags.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function html_views_custom_text_views_api() {
+  return array(
+    'api' => 3,
+    'path' => backdrop_get_path('module', 'html_views_custom_text') . '/views',
+  );
+}

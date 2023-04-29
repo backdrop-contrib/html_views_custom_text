@@ -1,0 +1,4 @@
+type = module
+name = HTML Custom Text Views Field
+description = Provides a Custom Text Views field that allows whitelisted HTML tags.
+backdrop = 1.x
