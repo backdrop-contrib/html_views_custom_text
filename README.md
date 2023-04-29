@@ -8,6 +8,13 @@ allows users with the appropriate permission to specify allowed tags.
 ## Installation
 - Install this module and its dependencies using the official [Backdrop CMS instructions](https://backdropcms.org/guide/modules)
 
+## Instructions
+The Views field provided by this module is available in the "Global" field group. By default, this field will accept the following HTML tags:
+`<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>`
+
+You can specify additional tags in the field configuration UI, under the text area "Allowed HTML tags". Only users with permission
+"Administer HTML Custom Text Views field".
+
 ## Credits
 - Created for Backdrop CMS by [argiepiano](https://github.com/argiepiano)
 
